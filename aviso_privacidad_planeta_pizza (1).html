@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad — Planeta Pizza</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rojo:#C8300A;
+  --rojo-dark:#8B1A08;
+  --queso:#F4A922;
+  --space:#1A0800;
+  --cream:#FFF8EF;
+  --kraft:#F5E6CC;
+  --text-dark:#1A0800;
+  --text-mid:#5C2D0A;
+  --text-light:#7A5030;
+  --border:#E0C8A8;
+}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--text-dark);
+  font-size:15px;
+  line-height:1.75;
+}
+.wrapper{max-width:780px;margin:0 auto;padding:0 24px 64px}
+
+/* HEADER */
+.header{
+  background:var(--space);
+  padding:48px 48px 40px;
+  text-align:center;
+  margin-bottom:0;
+}
+.header-logo-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:18px;margin-bottom:20px;
+}
+.header-logo-text{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:42px;letter-spacing:6px;
+  color:var(--queso);line-height:1;
+}
+.header-doc-title{
+  font-family:'Syne',sans-serif;
+  font-size:13px;font-weight:600;
+  letter-spacing:5px;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);
+  margin-bottom:8px;
+}
+.header-divider{
+  width:60px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--queso),transparent);
+  margin:16px auto;
+}
+.header-date{
+  font-size:12px;
+  font-family:'Syne',sans-serif;
+  letter-spacing:3px;
+  color:rgba(255,255,255,0.25);
+  text-transform:uppercase;
+}
+
+/* BODY WRAPPER */
+.content{
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:none;
+  padding:52px 56px;
+}
+
+/* SECCIONES */
+.section{margin-bottom:44px}
+.section:last-child{margin-bottom:0}
+
+.sec-num{
+  display:inline-block;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:11px;letter-spacing:4px;
+  background:var(--rojo);color:#fff;
+  padding:3px 10px;border-radius:3px;
+  margin-bottom:8px;
+}
+.sec-title{
+  font-family:'Syne',sans-serif;
+  font-size:17px;font-weight:700;
+  color:var(--text-dark);
+  margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--border);
+}
+.sec-title.highlight{
+  border-bottom-color:var(--queso);
+}
+
+p{
+  color:var(--text-mid);
+  margin-bottom:12px;
+  font-size:14.5px;
+}
+p:last-child{margin-bottom:0}
+
+strong{color:var(--text-dark);font-weight:600}
+
+/* ALERTA NO RECOLECCIÓN */
+.alert-box{
+  background:rgba(10,130,60,0.07);
+  border:1px solid rgba(10,130,60,0.25);
+  border-left:5px solid #1A8040;
+  border-radius:0 10px 10px 0;
+  padding:18px 22px;
+  margin:20px 0;
+}
+.alert-box p{
+  color:#1A4030;
+  font-size:14px;
+  margin-bottom:0;
+}
+.alert-box strong{color:#0D3020}
+
+/* LISTA */
+ul, ol{
+  padding-left:20px;
+  color:var(--text-mid);
+  font-size:14.5px;
+  margin-bottom:12px;
+}
+ul li, ol li{margin-bottom:6px;line-height:1.65}
+ul li:last-child, ol li:last-child{margin-bottom:0}
+
+/* TABLA */
+.table-wrap{overflow-x:auto;margin:16px 0}
+table{
+  width:100%;border-collapse:collapse;
+  font-size:13.5px;
+}
+th{
+  background:var(--rojo);color:#fff;
+  font-family:'Syne',sans-serif;font-weight:700;
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:10px 14px;text-align:left;
+}
+td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  color:var(--text-mid);vertical-align:top;
+  line-height:1.6;
+}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#FDFAF5}
+
+/* DATO INLINE */
+.dato{
+  background:var(--kraft);
+  border-radius:6px;
+  padding:14px 18px;
+  margin:12px 0;
+  font-size:14px;color:var(--text-mid);
+  line-height:1.75;
+}
+.dato strong{display:inline;color:var(--rojo-dark)}
+
+/* NOTA AL PIE */
+.nota-tecnica{
+  background:rgba(200,48,10,0.05);
+  border:1px solid rgba(200,48,10,0.15);
+  border-radius:8px;
+  padding:16px 20px;
+  margin-top:16px;
+  font-size:13px;color:var(--text-light);
+  line-height:1.75;
+}
+.nota-tecnica strong{color:var(--rojo)}
+
+/* FOOTER */
+.footer{
+  background:var(--space);
+  padding:36px 48px;
+  text-align:center;
+}
+.footer-brand{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:28px;letter-spacing:6px;color:var(--queso);
+  margin-bottom:8px;
+}
+.footer-note{
+  font-size:12px;color:rgba(255,255,255,0.25);
+  letter-spacing:1px;line-height:1.8;
+}
+.footer-rule{
+  width:50px;height:1px;
+  background:rgba(244,169,34,0.2);
+  margin:16px auto;
+}
+
+/* SEPARADOR ORNAMENTAL */
+.ornament{
+  text-align:center;
+  color:var(--border);
+  font-size:18px;letter-spacing:8px;
+  margin:32px 0;
+}
+
+@media(max-width:640px){
+  .content{padding:32px 24px}
+  .header{padding:36px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- CABECERA -->
+<div class="header">
+  <div class="header-logo-row">
+    <svg width="52" height="52" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="98" fill="#F4A922"/>
+      <circle cx="100" cy="100" r="86" fill="#C8300A"/>
+      <polygon points="40,60 43,70 53,70 45,76 48,86 40,80 32,86 35,76 27,70 37,70" fill="#F4A922"/>
+      <polygon points="160,60 163,70 173,70 165,76 168,86 160,80 152,86 155,76 147,70 157,70" fill="#F4A922"/>
+      <polygon points="100,185 55,115 145,115" fill="#F4A922"/>
+      <circle cx="90" cy="148" r="9" fill="#C8300A"/>
+      <circle cx="112" cy="162" r="7" fill="#C8300A"/>
+      <ellipse cx="100" cy="90" rx="38" ry="13" fill="#F4A922"/>
+      <ellipse cx="100" cy="82" rx="20" ry="12" fill="#F4A922"/>
+      <ellipse cx="100" cy="80" rx="10" ry="8" fill="#C8300A"/>
+      <line x1="100" y1="103" x2="100" y2="115" stroke="#F4A922" stroke-width="3" stroke-linecap="round"/>
+      <line x1="90" y1="102" x2="78" y2="112" stroke="#F4A922" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="110" y1="102" x2="122" y2="112" stroke="#F4A922" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="82" cy="90" r="4" fill="#C8300A"/>
+      <circle cx="100" cy="92" r="4" fill="#C8300A"/>
+      <circle cx="118" cy="90" r="4" fill="#C8300A"/>
+    </svg>
+    <div class="header-logo-text">PLANETA PIZZA</div>
+  </div>
+  <div class="header-doc-title">Aviso de Privacidad</div>
+  <div class="header-divider"></div>
+  <div class="header-date">Aplicación Web — Catálogo Interactivo · Versión 1.0 · Mayo 2025</div>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="wrapper">
+<div class="content">
+
+  <!-- I. IDENTIDAD DEL RESPONSABLE -->
+  <div class="section">
+    <span class="sec-num">I</span>
+    <div class="sec-title highlight">Identidad y Domicilio del Responsable</div>
+    <p>
+      <strong>Planeta Pizza</strong> (en adelante "el Responsable") es titular de la aplicación web de catálogo interactivo del mismo nombre, desarrollada por el equipo de estudiantes de la carrera <strong>Ingeniería en Desarrollo y Gestión de Software — IDGS 9° A</strong>, con propósito académico y de apoyo operativo al local de pizzería.
+    </p>
+    <div class="dato">
+      <strong>Nombre del sistema:</strong> Planeta Pizza — Catálogo Web<br>
+      <strong>Tipo de aplicación:</strong> Aplicación web de catálogo interactivo (vitrina digital)<br>
+      <strong>Modalidad de servicio:</strong> Exclusivamente presencial en el punto de venta<br>
+      <strong>Equipo responsable:</strong> César Mundo González · Eleonor G. Radilla Partida · Adán de J. Morales Capistran · Fátima García Peralta · Alex Tadeo Carrera Rojas
+    </div>
+    <p>
+      El presente aviso de privacidad se emite en cumplimiento de las disposiciones aplicables en materia de protección de datos personales y tiene como propósito informar a los usuarios de la aplicación web sobre el tratamiento que se da —o no se da— a su información.
+    </p>
+  </div>
+
+  <!-- II. NATURALEZA DE LA APLICACIÓN -->
+  <div class="section">
+    <span class="sec-num">II</span>
+    <div class="sec-title">Naturaleza y Alcance de la Aplicación</div>
+    <p>
+      La aplicación web de <strong>Planeta Pizza</strong> es una <strong>vitrina digital de catálogo interactivo</strong>. Su única finalidad es presentar visualmente el menú completo de la pizzería —incluyendo productos por categoría, opciones de personalización, combos familiares y promociones vigentes— para facilitar la consulta del cliente en el punto de venta.
+    </p>
+    <p>
+      La aplicación <strong>no procesa pedidos en línea, no gestiona envíos a domicilio, no realiza transacciones económicas de ningún tipo</strong> y no incluye pasarela de pago ni formulario de cobro. Todo pedido y pago se efectúa directamente en la caja del local, de forma presencial, en efectivo o con tarjeta.
+    </p>
+
+    <div class="alert-box">
+      <p>
+        <strong>🔒 La aplicación Planeta Pizza NO recopila, almacena ni procesa datos personales de los clientes.</strong> No existe registro de usuario, inicio de sesión, historial de pedidos, ni ningún mecanismo que identifique o rastree a las personas que consultan el catálogo.
+      </p>
+    </div>
+  </div>
+
+  <!-- III. DATOS PERSONALES -->
+  <div class="section">
+    <span class="sec-num">III</span>
+    <div class="sec-title">Datos Personales Tratados</div>
+
+    <p>
+      La aplicación funciona como catálogo de consulta de uso presencial. No cuenta con registro de usuario, formularios de contacto, proceso de compra en línea ni ningún mecanismo que requiera que el cliente proporcione información personal. Por ello, <strong>Planeta Pizza — Catálogo Web no recopila, almacena ni trata datos personales</strong> de quienes la consultan.
+    </p>
+    <p>
+      La selección de productos que el usuario puede armar dentro de la aplicación es una <strong>lista temporal en pantalla</strong>, pensada únicamente para organizar el pedido antes de acercarse a caja. Esta información existe solo durante la sesión activa y desaparece al cerrar o recargar la aplicación; no se guarda en ningún servidor ni base de datos.
+    </p>
+  </div>
+
+  <!-- IV. FINALIDADES -->
+  <div class="section">
+    <span class="sec-num">IV</span>
+    <div class="sec-title">Finalidades del Tratamiento</div>
+    <p>
+      Al no recopilarse datos personales de clientes, no existe tratamiento de información personal con fines comerciales, estadísticos, de marketing ni de ninguna otra naturaleza.
+    </p>
+    <p>
+      Las <strong>únicas finalidades de la aplicación</strong> son de carácter informativo y de apoyo al cliente en el punto de venta:
+    </p>
+    <ul>
+      <li>Presentar el catálogo visual de pizzas clasificado por tamaño (grande, mediana, chica) y por sabor.</li>
+      <li>Mostrar opciones de personalización de productos (tipo de masa, tamaño, ingredientes opcionales).</li>
+      <li>Exhibir combos familiares, precios y promociones o descuentos vigentes.</li>
+      <li>Permitir al cliente organizar visualmente su selección antes de acercarse a caja.</li>
+      <li>Informar sobre los métodos de pago aceptados en el local (efectivo y tarjeta).</li>
+    </ul>
+  </div>
+
+  <!-- V. ADMINISTRADOR DEL SISTEMA -->
+  <div class="section">
+    <span class="sec-num">V</span>
+    <div class="sec-title">Rol del Administrador del Sistema</div>
+    <p>
+      La aplicación contempla un <strong>perfil de administrador</strong> con acceso restringido, cuya función es gestionar el contenido del catálogo: actualizar precios, sabores, imágenes, combos y promociones activas. Este acceso es exclusivo del responsable del local o la persona autorizada por él.
+    </p>
+    <p>
+      En el ejercicio de estas funciones, el administrador <strong>no tiene acceso a datos personales de clientes</strong>, ya que la aplicación no los recopila. Su actividad se limita al mantenimiento del contenido público del catálogo digital.
+    </p>
+    <div class="nota-tecnica">
+      <strong>Nota técnica:</strong> El repositorio del proyecto se gestiona bajo GitHub Flow con acceso controlado por el equipo de desarrollo (IDGS 9° A). El código fuente, historial de cambios y ramas de trabajo son recursos internos del equipo y no contienen información personal de clientes finales.
+    </div>
+  </div>
+
+  <!-- VI. TRANSFERENCIA DE DATOS -->
+  <div class="section">
+    <span class="sec-num">VI</span>
+    <div class="sec-title">Transferencia de Datos a Terceros</div>
+    <p>
+      Dado que <strong>Planeta Pizza — Catálogo Web no recopila datos personales de sus usuarios</strong>, no existe transferencia, cesión, venta ni compartición de información personal con terceros de ningún tipo, ya sean empresas de publicidad, plataformas de análisis, redes sociales u otros proveedores de servicios.
+    </p>
+    <p>
+      La aplicación no integra herramientas de analítica de usuario (como Google Analytics), píxeles de seguimiento, cookies de terceros ni SDKs publicitarios.
+    </p>
+  </div>
+
+  <!-- VII. DERECHOS ARCO -->
+  <div class="section">
+    <span class="sec-num">VII</span>
+    <div class="sec-title">Derechos del Usuario</div>
+    <p>
+      Al no existir recopilación de datos personales, el ejercicio formal de los derechos de <strong>Acceso, Rectificación, Cancelación y Oposición (ARCO)</strong> no resulta aplicable en el contexto de esta aplicación, ya que no existe información personal de usuarios almacenada en el sistema.
+    </p>
+    <p>
+      No obstante, cualquier usuario que tenga dudas, inquietudes o comentarios relacionados con el tratamiento de su información podrá dirigirse directamente al personal del local <strong>Planeta Pizza</strong> durante el horario de atención.
+    </p>
+  </div>
+
+  <!-- VIII. SEGURIDAD -->
+  <div class="section">
+    <span class="sec-num">VIII</span>
+    <div class="sec-title">Medidas de Seguridad</div>
+    <p>
+      El equipo de desarrollo ha adoptado las siguientes medidas técnicas y organizativas para garantizar la integridad, disponibilidad y confidencialidad del sistema:
+    </p>
+    <ul>
+      <li><strong>Control de versiones con GitHub Flow:</strong> todo cambio al código pasa por revisión y aprobación mediante Pull Request antes de integrarse a la rama principal, evitando modificaciones no autorizadas.</li>
+      <li><strong>Ramas de desarrollo protegidas:</strong> ningún integrante del equipo puede hacer cambios directos a la rama <code>main</code> sin revisión previa del encargado del repositorio.</li>
+      <li><strong>Ausencia de bases de datos de usuarios:</strong> al no existir registro de clientes, no hay base de datos de información personal que deba protegerse contra accesos no autorizados.</li>
+      <li><strong>Sin almacenamiento local de sesión:</strong> la vista de selección es temporal en memoria del navegador y no persiste entre sesiones.</li>
+      <li><strong>Mantenimiento controlado:</strong> las actualizaciones de catálogo, precios y promociones son realizadas únicamente por el administrador autorizado del local.</li>
+    </ul>
+  </div>
+
+  <!-- IX. COOKIES Y TECNOLOGÍAS DE RASTREO -->
+  <div class="section">
+    <span class="sec-num">IX</span>
+    <div class="sec-title">Cookies y Tecnologías de Rastreo</div>
+    <p>
+      La aplicación web de Planeta Pizza <strong>no utiliza cookies de rastreo, cookies de sesión persistente, web beacons, píxeles de seguimiento ni ninguna otra tecnología de monitoreo del comportamiento del usuario</strong>.
+    </p>
+    <p>
+      El navegador puede generar datos de caché propios para mejorar el rendimiento de carga de la aplicación (imágenes, estilos); estos son gestionados exclusivamente por el dispositivo del usuario y no son accesibles por el Responsable.
+    </p>
+  </div>
+
+  <!-- X. CAMBIOS AL AVISO -->
+  <div class="section">
+    <span class="sec-num">X</span>
+    <div class="sec-title">Modificaciones al Aviso de Privacidad</div>
+    <p>
+      El Responsable se reserva el derecho de actualizar el presente aviso de privacidad en caso de que el sistema sea modificado para incorporar nuevas funcionalidades que impliquen el tratamiento de datos personales (por ejemplo: registro de usuarios, pedidos en línea, entregas a domicilio u otras que estén actualmente fuera del alcance definido en el Documento de Requerimientos, versión 1.0).
+    </p>
+    <p>
+      Cualquier modificación relevante será notificada mediante la publicación del aviso actualizado dentro de la propia aplicación, con indicación de la nueva fecha de vigencia.
+    </p>
+    <p>
+      La versión vigente del aviso de privacidad será siempre la disponible en la aplicación al momento de su consulta.
+    </p>
+  </div>
+
+  <!-- XI. CONTACTO -->
+  <div class="section">
+    <span class="sec-num">XI</span>
+    <div class="sec-title">Contacto y Atención</div>
+    <p>
+      Para cualquier duda, aclaración o comentario relacionado con el presente aviso de privacidad o con el funcionamiento de la aplicación, el usuario podrá comunicarse directamente en el punto de venta:
+    </p>
+    <div class="dato">
+      <strong>Establecimiento:</strong> Planeta Pizza<br>
+      <strong>Atención:</strong> Personal del local durante horario de servicio<br>
+      <strong>Modalidad:</strong> Presencial en caja del local
+    </div>
+  </div>
+
+  <div class="ornament">· · ·</div>
+
+  <p style="font-size:13px;color:var(--text-light);text-align:center;line-height:1.8">
+    Este aviso de privacidad fue elaborado conforme a la naturaleza y alcance del sistema descrito en el <em>Documento de Requerimientos del Sistema — Planeta Pizza v1.0</em> y el <em>Documento de Gestión y Control del Repositorio — IDGS 9° A, mayo 2025</em>.<br>
+    <strong style="color:var(--text-mid)">Fecha de emisión: Mayo 2025 · Vigente hasta nueva publicación.</strong>
+  </p>
+
+</div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<div class="footer">
+  <div class="footer-brand">PLANETA PIZZA</div>
+  <div class="footer-rule"></div>
+  <div class="footer-note">
+    Aviso de Privacidad — Aplicación Web Catálogo Interactivo<br>
+    IDGS 9° A · Versión 1.0 · Mayo 2025<br>
+    Todos los derechos reservados · Uso académico y operativo
+  </div>
+</div>
+
+</body>
+</html>
